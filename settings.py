@@ -25,8 +25,8 @@ SOURCES_LIST = [IMAGE, VIDEO, WEBCAM, RTSP, YOUTUBE]
 
 # Images config
 IMAGES_DIR = ROOT / 'images'
-DEFAULT_IMAGE = IMAGES_DIR / 'ac5a4.jpg'
-DEFAULT_DETECT_IMAGE = IMAGES_DIR / 'back-parking.jpg'
+DEFAULT_IMAGE = IMAGES_DIR /'back-parking.jpg'
+DEFAULT_DETECT_IMAGE = IMAGES_DIR /  'ac5a4.jpg'
 
 # Videos config
 VIDEO_DIR = ROOT / 'videos'
