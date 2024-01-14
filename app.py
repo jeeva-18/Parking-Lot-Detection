@@ -87,7 +87,7 @@ if source_radio == settings.IMAGE:
                 try:
                     with st.expander("Detection Results"):
                         for box in boxes:
-                            classes = box.data[:,5]
+                            classes = box.data[:,5][0]
                             st.write(classes)
                 except Exception as ex:
                     # st.write(ex)
