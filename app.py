@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 # Main page heading
-st.title("Object Detection using YOLOv8")
+st.title("Parking Detection using YOLOv8")
 
 # Sidebar
 st.sidebar.header("ML Model Config")
@@ -82,6 +82,7 @@ if source_radio == settings.IMAGE:
                                     )
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
+                st.write(res[0].classes)
                 st.image(res_plotted, caption='Detected Image',
                          use_column_width=True)
                 try:
