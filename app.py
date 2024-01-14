@@ -87,7 +87,7 @@ if source_radio == settings.IMAGE:
                 try:
                     with st.expander("Detection Results"):
                         for box in boxes:
-                            st.write(box.data[5])
+                            st.write(box.data[1])
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
