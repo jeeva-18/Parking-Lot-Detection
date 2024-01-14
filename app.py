@@ -84,11 +84,18 @@ if source_radio == settings.IMAGE:
                 res_plotted = res[0].plot()[:, :, ::-1]
                 st.image(res_plotted, caption='Detected Image',
                          use_column_width=True)
+                occ = []
+                unocc = []
                 try:
                     with st.expander("Detection Results"):
                         for box in boxes:
                             classes = int(box.data[:,5][0])
-                            st.write(classes)
+                            if classes == 1:
+                                occ.append(classes)
+                            else:
+                                unocc.append(classes)
+                        st.write(f"Occupied spaces : {len(occ)}")
+                        st.write(f"Free spaces : {len(unocc)}")
                 except Exception as ex:
                     # st.write(ex)
                     st.write("No image is uploaded yet!")
